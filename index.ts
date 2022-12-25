@@ -1,5 +1,3 @@
-// Code Tidy
-
 import { showReviewTotal, populateUser, showDetails, getTopTwoReviews} from './utils'
 import { Permissions , LoyaltyUser } from './enums'
 import { Review, Property } from './interfaces'
@@ -12,7 +10,6 @@ const footer = document.querySelector('.footer')
 
 let isLoggedIn: boolean
 
-// Reviews
 const reviews: Review[] = [
     {
         name: 'Sheila',
@@ -43,7 +40,6 @@ const you = {
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
 }
 
-// Array of Properties
 const properties : Property[] = [
     {
         image: 'images/colombia-property.jpg',
@@ -99,12 +95,10 @@ const properties : Property[] = [
     }
 ]
 
-// Functions
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 populateUser(you.isReturning, you.firstName)
 
-// Add the properties
 for (let i = 0; i < properties.length; i++) {
     const card = document.createElement('div')
     card.classList.add('card')
